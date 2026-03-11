@@ -1,64 +1,62 @@
-# BeyondTouch: A Multimodal Accessibility System for Human–Computer Interaction
+BeyondTouch: A Vision Based System For Universal Computer Interaction
 
-## Overview
+Overview
 
 BeyondTouch is a multimodal human–computer interaction system that enables users to control a computer without using a physical mouse or keyboard. The system integrates hand gestures, eye tracking, and voice commands to create a touchless interface that improves accessibility and interaction flexibility.
 
-Traditional computer interfaces rely heavily on physical devices such as a mouse and keyboard. These devices can be challenging to use for individuals with motor disabilities or in environments where hands-free interaction is required. BeyondTouch addresses this problem by combining computer vision and speech recognition technologies to provide an intuitive alternative interface.
+Traditional computer interfaces rely heavily on physical devices such as a mouse and keyboard. These devices can be difficult to use for individuals with motor disabilities or in environments where hands-free interaction is required. BeyondTouch addresses this problem by combining computer vision and speech recognition technologies to provide an intuitive alternative interface.
 
 The system allows users to move the cursor, perform clicks, execute commands, and navigate the operating system using natural gestures, eye movements, or voice instructions.
 
 ---
 
-## Real World Problem
+Real-World Problem
 
 Millions of users face difficulty interacting with computers due to physical impairments, repetitive strain injuries, or environmental constraints. Standard input devices require precise hand movement and constant physical interaction.
 
-Additionally, in certain environments such as healthcare settings, laboratories, or industrial spaces, touch-based interfaces may not be practical.
-
-BeyondTouch aims to solve these challenges by introducing a multimodal interaction system that allows users to interact with computers using natural human behaviors such as gestures, gaze, and speech.
+Additionally, in environments such as healthcare settings, laboratories, or industrial spaces, touch-based interfaces may not be practical. BeyondTouch addresses these challenges by introducing a multimodal interaction system that allows users to interact with computers using natural human behaviors such as gestures, gaze, and speech.
 
 ---
 
-## Key Features
+Key Features
 
-• Touchless computer control using computer vision  
-• Cursor movement using hand gestures or eye tracking  
-• Mouse click detection using blink gestures  
-• Voice commands to open applications and execute tasks  
-• Multimodal input combining gesture, gaze, and voice  
-• Smooth cursor control using smoothing algorithms  
-• Real-time interaction using webcam and microphone  
+- Touchless computer control using computer vision
+- Cursor movement using hand gestures or eye tracking
+- Mouse click detection using blink gestures
+- Voice commands to open applications and execute tasks
+- Multimodal input combining gesture, gaze, and voice
+- Smooth cursor control using smoothing algorithms
+- Real-time interaction using webcam and microphone
 
 ---
 
-## System Architecture
+System Architecture
 
-The system consists of several layers:
+Input Layer
 
-### Input Layer
 Captures user input through hardware devices.
 
 - Webcam for gesture and eye tracking
 - Microphone for voice commands
 
-### Perception Layer
-Extracts meaningful data from raw input using computer vision models.
+Perception Layer
+
+Extracts meaningful information from raw input using computer vision models.
 
 - MediaPipe Hands detects 21 hand landmarks
 - MediaPipe FaceMesh detects 468 facial landmarks
 - SpeechRecognition converts audio to text
 
-### Interpretation Layer
-Processes detected features and interprets gestures or commands.
+Interpretation Layer
 
-Examples include:
+Processes detected features and interprets gestures or commands.
 
 - Gesture classification based on finger positions
 - Blink detection using eye aspect ratio
-- Voice command parsing using text pattern matching
+- Voice command parsing using pattern matching
 
-### Action Execution Layer
+Action Execution Layer
+
 Executes system-level commands using automation libraries.
 
 The PyAutoGUI library performs actions such as:
@@ -68,17 +66,19 @@ The PyAutoGUI library performs actions such as:
 - Typing text
 - Opening applications
 
-### Interface Layer
-A simple graphical interface built using Tkinter allows users to select different interaction modes.
+Interface Layer
+
+A graphical interface built using Tkinter allows users to select different interaction modes.
 
 ---
 
-## Technologies Used
+Technologies Used
 
-Programming Language:
-Python
+Programming Language
 
-Libraries:
+- Python
+
+Libraries
 
 - OpenCV
 - MediaPipe
@@ -91,9 +91,9 @@ Libraries:
 
 ---
 
-## Modules
+Project Modules
 
-### Hand Gesture Control
+Hand Gesture Control
 
 Uses MediaPipe Hands to detect 21 hand landmarks and classify gestures based on finger positions and angles.
 
@@ -107,83 +107,64 @@ Functions include:
 
 Gesture recognition is implemented using geometric relationships between landmarks.
 
----
-
-### Eye Tracking
+Eye Tracking
 
 Uses MediaPipe FaceMesh to detect eye landmarks and estimate gaze direction.
 
 Cursor movement is controlled using the iris position. Blink detection is implemented using the Eye Aspect Ratio (EAR) to trigger mouse clicks.
 
----
-
-### Voice Command System
+Voice Command System
 
 Voice commands are captured using a microphone and converted to text using SpeechRecognition.
 
-Commands supported include:
+Supported commands include:
 
 - Opening applications
 - Searching the web
 - Typing text
 - Executing keyboard shortcuts
 
----
+Action Execution System
 
-### Action Execution System
-
-An action queue ensures that commands are executed sequentially to avoid conflicts between gesture, gaze, and voice inputs.
+An action queue ensures commands are executed sequentially to avoid conflicts between gesture, gaze, and voice inputs.
 
 ---
 
-## Installation
+Installation
 
-Clone the repository:
+Clone the repository
 
+git clone https://github.com/harini004-cell/BeyondTouch-A-Vision-Based-System-For-Universal-Computer-Interaction.git
 
-
-git clone [https://github.com/yourusername/BeyondTouch-Multimodal-Accessibility-System.git](https://github.com/yourusername/BeyondTouch-Multimodal-Accessibility-System.git)
-
-
-
-Install dependencies:
-
-
+Install dependencies
 
 pip install -r requirements.txt
 
+Run the application
 
-
-Run the application:
-
-
-
-python gui/main_gui_simple.py
-
-
+python main_gui_simple.py
 
 ---
 
-## Applications
+Applications
 
-• Assistive technology for individuals with disabilities  
-• Touchless computer interaction  
-• Smart environments and automation systems  
-• Research in human–computer interaction  
-
----
-
-## Future Improvements
-
-• Deep learning-based gesture classification  
-• Custom wake-word voice assistant  
-• Mobile device integration  
-• Augmented reality interaction  
+- Assistive technology for individuals with disabilities
+- Touchless computer interaction
+- Smart environments and automation systems
+- Research in human–computer interaction
 
 ---
 
-## Author
+Future Improvements
 
-Harini V
+- Deep learning-based gesture classification
+- Custom wake-word voice assistant
+- Mobile device integration
+- Augmented reality interaction
 
+---
+
+Author
+
+V Harini 
 Computer Science Engineering Student
